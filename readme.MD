@@ -29,9 +29,7 @@ Clone o repositório:
 git clone https://github.com/seu-usuario/seu-repositorio.git
 
 # instalar todas as bibliotecas
-npm install
-#ou
-yarn add
+yarn
 
 # executar o projeto
 npm run start
