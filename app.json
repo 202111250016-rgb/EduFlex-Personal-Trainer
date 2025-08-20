@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "EduFlex",
-    "slug": "EduFlex",
+    "name": "Personal Flex",
+    "slug": "PersonalFlex",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,7 +20,11 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.nick_dyegars.PersonalFlex"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -32,6 +36,11 @@
           "photosPermission": "The app accesses your photos to let you share them with your friends."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "ad33a1f0-b191-4d6a-9514-02a8a69174f4"
+      }
+    }
   }
 }

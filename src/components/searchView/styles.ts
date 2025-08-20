@@ -3,10 +3,12 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
   flex-direction: row;
   align-items: center;
-  background-color: #A68A80;
+  background-color: #C7FFED;
   border-radius: 8px;
+  border: #023535 2px;
   /* padding: 8px; */
-  margin: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
 `;
 
 export const IconButton = styled.TouchableOpacity`

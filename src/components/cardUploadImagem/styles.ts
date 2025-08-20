@@ -7,7 +7,7 @@ export const Container = styled.View`
     align-items: center;
     margin-top: 16px;
     padding: 16px;
-    background-color: #f9f9f9;
+    background-color: #C7FFED;
     border-radius: 8px;
     shadow-color: #000;
     shadow-opacity: 1;
@@ -45,7 +45,7 @@ export const UploadButton = styled.TouchableOpacity`
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    border: 2px dashed #000000;
+    border: 2px dashed #023535;
 `;
 
 export const UploadButtonText = styled.Text`

@@ -9,7 +9,7 @@ interface SearchViewProps {
 
 const SearchView: React.FC<SearchViewProps> = ({ onSearch, onVisibilityChange }) => {
   const [query, setQuery] = useState('');
-  const [isInputVisible, setIsInputVisible] = useState(false);
+  const [isInputVisible, setIsInputVisible] = useState(true);
 
   const handleSearch = (text: string) => {
     setQuery(text);
@@ -19,7 +19,7 @@ const SearchView: React.FC<SearchViewProps> = ({ onSearch, onVisibilityChange })
   const toggleInputVisibility = () => {
     const newVisibility = !isInputVisible;
     setIsInputVisible(newVisibility);
-    onVisibilityChange?.(newVisibility); // 👈 informa o componente pai
+    onVisibilityChange?.(newVisibility);
   };
 
   return (
@@ -34,6 +34,10 @@ const SearchView: React.FC<SearchViewProps> = ({ onSearch, onVisibilityChange })
           onChangeText={handleSearch}
           placeholderTextColor="#000"
           autoFocus
+          onBlur={() => {
+            setIsInputVisible(false);
+            onVisibilityChange?.(false); // avisa o componente pai
+          }}
         />
       )}
     </S.Container>

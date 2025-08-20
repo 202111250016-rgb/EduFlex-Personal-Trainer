@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, ContainerLogo, ContainerBody, Text } from './styles';
+import { Container, ContainerLogo, ContainerBody, Text, ImageStyled } from './styles';
 import { EditText } from '../../components/editText';
 import { Button } from '../../components/button';
 
@@ -14,7 +14,7 @@ export default function Login({navigation}: any) {
     return (
         <Container>
             <ContainerLogo>
-                <Text>Logo</Text>
+                <ImageStyled source={require("../../../assets/Logo.png")} />
             </ContainerLogo>
             <ContainerBody>
                 <EditText

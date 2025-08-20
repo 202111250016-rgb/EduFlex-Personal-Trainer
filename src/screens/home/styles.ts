@@ -4,11 +4,11 @@ export const Container = styled.View`
     flex: 1;
     height: 100%;
     width: 100%;
-    margin-top: 32px;
     padding: 16px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #C7FFED;
 `;
 
 export const Text = styled.Text`

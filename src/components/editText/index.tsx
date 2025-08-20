@@ -3,7 +3,7 @@ import { Container, TextTitulo, ContainerInput, Input, Icon, IconNone } from './
 import Feather from '@expo/vector-icons/Feather';
 import Fontisto from '@expo/vector-icons/Fontisto';
 
-export function EditText({ text, icone, isPassword = false, placeholder, height = 60, marginBottom = 0, ...rest }: any) {
+export function EditText({ text, icone, isPassword = false, placeholder, height = 60, marginBottom = 0, style = {}, ...rest }: any) {
   const [isPasswordVisible, setPasswordVisible] = useState(!isPassword);
 
   return (

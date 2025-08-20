@@ -17,6 +17,7 @@ export default function Alunos({ navigation }: any) {
     const [searchTerm, setSearchTerm] = useState('');
     const [alunosFiltrados, setAlunosFiltrados] = useState<Aluno[]>([]);
     const [searchVisible, setSearchVisible] = useState(false);
+    const [isAlunosEmpty, setIsAlunosEmpty] = useState(false);
 
 
     useEffect(() => {
@@ -44,24 +45,31 @@ export default function Alunos({ navigation }: any) {
                         nome: value.nome || "Aluno sem nome",
                         contato: value.contato || "",
                         email: value.email || "",
+                        dataNascimento: value.dataNascimento || "",
+                        peso: value.peso || 0,
+                        altura: value.altura || 0,
+                        sexo: value.sexo || "",
                         imagem: value.imagem || null,
                     })
                 );
                 const sortedData = alunosArray.sort((a, b) => a.nome.localeCompare(b.nome));
+
                 setAlunos(sortedData);
                 setAlunosFiltrados(sortedData);
+                setIsAlunosEmpty(sortedData.length === 0); // TRUE se nenhum aluno
             } else {
                 setAlunos([]);
                 setAlunosFiltrados([]);
+                setIsAlunosEmpty(true); // TRUE quando não há alunos
             }
         });
 
-        return () => unsubscribe();
+        return unsubscribe;
     };
 
     const handleVisibilityChange = (visible: boolean) => {
         setSearchVisible(visible);
-        console.log("Search visível?", visible);
+        // console.log("Search visível?", visible);
     };
 
     const handleAdicionarAluno = () => {
@@ -72,13 +80,13 @@ export default function Alunos({ navigation }: any) {
         <Container>
             <ScrollView>
                 {searchVisible ? (
-                    <ContainerTop>
+                    <ContainerTop style={{ paddingStart: 0, paddingEnd: 0 }}>
                         <SearchView
                             onSearch={handleFiltrarAlunos}
                             onVisibilityChange={handleVisibilityChange}
                         />
                     </ContainerTop>
-                ): (
+                ) : (
                     <ContainerTop>
                         <Icon onPress={() => navigation.goBack()}>
                             <Ionicons name="chevron-back" size={24} color="black" />
@@ -91,13 +99,17 @@ export default function Alunos({ navigation }: any) {
                 )}
 
                 <ContainerBody>
-                    {alunosFiltrados.map((aluno) => (
-                        <CardAlunos
-                            key={aluno.id}
-                            aluno={aluno}
-                            navigation={navigation}
-                        />
-                    ))}
+                    {(isAlunosEmpty) ? (
+                        <Text>Nenhum aluno encontrado</Text>
+                    ) :
+                        alunosFiltrados.map((aluno) => (
+                            <CardAlunos
+                                key={aluno.id}
+                                aluno={aluno}
+                                navigation={navigation}
+                            />
+                        ))
+                    }
                 </ContainerBody>
             </ScrollView>
             <ContainerBottom>

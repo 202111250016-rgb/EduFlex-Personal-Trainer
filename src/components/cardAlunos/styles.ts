@@ -11,7 +11,7 @@ export const Container = styled.TouchableOpacity`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
+    background-color: #D8FFDB;
     border-radius: 16px;
     shadow-color: #000;
     shadow-opacity: 0.25;

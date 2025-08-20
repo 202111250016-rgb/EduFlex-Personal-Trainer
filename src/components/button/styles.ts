@@ -8,7 +8,7 @@ interface ContainerProps {
 export const Container = styled.TouchableOpacity<ContainerProps>`
   height: 60px;
   width: 100%;
-  background-color: #000000;
+  background-color: #023535;
   padding: 12px;
   border-radius: ${(props) => props.radius || 16}px;
   align-items: center;
@@ -16,6 +16,6 @@ export const Container = styled.TouchableOpacity<ContainerProps>`
 `;
 
 export const Text = styled.Text`
-  color: #fff;
+  color: #C7FFED;
   font-size: 16px;
 `;

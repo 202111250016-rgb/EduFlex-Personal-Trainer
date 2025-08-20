@@ -4,11 +4,11 @@ export const Container = styled.View`
     flex: 1;
     height: 100%;
     width: 100%;
-    margin-top: 32px;
     padding: 16px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #C7FFED;
 `;
 
 export const ContainerLogo = styled.View`
@@ -26,4 +26,11 @@ export const ContainerBody = styled.View`
 export const Text = styled.Text`
     font-size: 16px;
     color: #000000;
+`;
+
+export const ImageStyled = styled.Image`
+    width: 200px;
+    height: 200px;
+    margin-bottom: 32px;
+    border-radius: 90px;
 `;

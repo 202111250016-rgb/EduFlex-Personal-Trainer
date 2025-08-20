@@ -4,8 +4,8 @@ export const Container = styled.View`
     flex: 1;
     height: 100%;
     width: 100%;
-    margin-top: 16px;
     flex-direction: column;
+    background-color: #C7FFED;
 `;
 
 export const Text = styled.Text`
@@ -19,7 +19,7 @@ export const ContainerTop = styled.View`
     align-items: center;
     padding-left: 16px;
     padding-right: 16px;
-    padding-top: 16px;
+    padding-top: 32px;
     gap: 32px;
 `;
 
@@ -56,10 +56,17 @@ export const ContainerCampos = styled.View`
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
-    border: 2px solid #000000;
+    border: 2px solid #023535;
     flex-direction: row;
     align-items: center;
     padding: 0 10px; /* Adiciona padding horizontal */
+`;
+
+export const ContainerPesoAltura = styled.View`
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px;
 `;
 
 export const ContainerBottom = styled.View`
@@ -73,7 +80,7 @@ export const Icon = styled.TouchableOpacity`
     padding: 6px;
     borderWidth: 1px;
     borderRadius: 8px;
-    borderColor: #D4D4D4;
+    borderColor: #023535;
     align-items: center;
     justify-content: center;
 `;

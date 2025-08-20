@@ -1,6 +1,7 @@
-import { Container, Text, ContainerTop, ContainerBody, ContainerBottom, Icon, ContainerCampos, ContainerImage, ImageStyled } from "./styles";
+import { Container, Text, ContainerTop, ContainerBody, ContainerBottom, Icon, ContainerCampos, ContainerPesoAltura, ContainerImage, ImageStyled } from "./styles";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useEffect } from "react";
+import { View } from "react-native";
 import 'react-native-get-random-values';;
 
 export default function PerfilAluno({ navigation, route }: any) {
@@ -21,8 +22,8 @@ export default function PerfilAluno({ navigation, route }: any) {
             <ContainerBody>
                 <ContainerImage>
                     {aluno?.imagem !== null ? (
-                        <ImageStyled source={imageSource}/>
-                    ): (
+                        <ImageStyled source={imageSource} />
+                    ) : (
                         <ImageStyled source={require("../../../assets/perfil.png")} />
                     )}
                 </ContainerImage>
@@ -32,6 +33,24 @@ export default function PerfilAluno({ navigation, route }: any) {
                 </ContainerCampos>
                 <ContainerCampos>
                     <Text>{aluno?.contato}</Text>
+                </ContainerCampos>
+                <ContainerCampos>
+                    <Text>{aluno?.dataNascimento}</Text>
+                </ContainerCampos>
+                <ContainerPesoAltura>
+                    <View style={{ flex: 1 }}>
+                        <ContainerCampos>
+                            <Text>{`${aluno?.peso}Kg`}</Text>
+                        </ContainerCampos>
+                    </View>
+                    <View style={{ flex: 1 }}>
+                        <ContainerCampos>
+                            <Text>{`${aluno?.altura}Cm`}</Text>
+                        </ContainerCampos>
+                    </View>
+                </ContainerPesoAltura>
+                <ContainerCampos>
+                    <Text>{aluno?.sexo}</Text>
                 </ContainerCampos>
 
             </ContainerBody>

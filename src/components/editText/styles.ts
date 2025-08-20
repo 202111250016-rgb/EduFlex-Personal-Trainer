@@ -27,7 +27,7 @@ export const ContainerInput = styled.View<ContainerInputProps>`
   width: 100%;
   height: ${({ height }) => height}px; /* Define a altura customizável */
   border-radius: 10px;
-  border: 2px solid #000000;
+  border: 2px solid #023535;
   flex-direction: row;
   align-items: center;
   padding: 0 10px; /* Adiciona padding horizontal */

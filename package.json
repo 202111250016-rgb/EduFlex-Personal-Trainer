@@ -1,5 +1,5 @@
 {
-  "name": "eduflex",
+  "name": "personal-flex",
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
@@ -19,6 +19,7 @@
     "react": "19.0.0",
     "react-native": "0.79.5",
     "react-native-dotenv": "^3.4.11",
+    "react-native-dropdown-picker": "^5.4.6",
     "react-native-get-random-values": "~1.11.0",
     "react-native-popup-menu": "^0.18.0",
     "react-native-safe-area-context": "^5.5.2",
